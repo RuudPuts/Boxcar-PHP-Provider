@@ -222,11 +222,7 @@ class boxcar_api {
 	private function http_post ($task, $data) {
 		$url = self::ENDPOINT . $this->api_key . '/' . $task . '/';
 
-		$post_fields = array();
-		foreach ($data as $k=>$v) {
-			array_push($post_fields, "$k=$v");
-		}
-		$post_fields = implode('&', $post_fields);
+		$post_fields = http_build_query($data);
 
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL, $url);
