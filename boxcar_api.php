@@ -22,10 +22,9 @@ class boxcar_api {
 	const USERAGENT = 'UKD1_Boxcar_Client';
 	
 	/**
-	 * The endpoint for service, I've tested with https even
-	 * though the documentation only mentions http.
+	 * The endpoint for service.
 	 */
-	const ENDPOINT = 'https://boxcar.io/devices/providers/';
+	const ENDPOINT = 'http://boxcar.io/devices/providers/';
 	
 	/**
 	 * Timeout for the API requests in seconds
